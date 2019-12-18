@@ -38,4 +38,9 @@ void main() {
       print(employee);
       print(employee['empl1']);
   
+  var bool1={};
+  var bool2={'bool':'true'};
+      print(bool1.isEmpty);
+      print(bool2.isEmpty);
+  
 }
