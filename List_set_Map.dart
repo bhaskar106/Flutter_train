@@ -39,7 +39,8 @@ void main() {
       print(employee['empl1']);
   
   var bool1={};
-  var bool2={'bool':'true'};
+  var bool2={'bool1':'true','bool2':'false'};
+      print("bool values of the Map");
       print(bool1.isEmpty);
       print(bool2.isEmpty);
   
