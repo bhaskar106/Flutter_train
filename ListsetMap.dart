@@ -1,6 +1,6 @@
 import 'dart:io';
 void main() {
-  
+
   var  list1 = new List();
        list1.add(34);       
        list1.add(876);
@@ -69,9 +69,12 @@ void main() {
       
   
   var student = new Map();
-      student['std1']='';
+      student['std1']='Sanjay';
       student['std2']='bhaskar';
       student['std3']='sanjay';
+      student['std4']='sanjay';
+      student['std5']='bhaskar';
+      student['std6']='Sanjay';
       print("Map of type constructor");
       print(student);
       print("Enter the key in map to be removed:");
@@ -92,19 +95,20 @@ void main() {
       print("Enter the value and the key where the key should be updated:");
   var UMV = stdin.readLineSync();
   var UMK = stdin.readLineSync();
-      for(int i=0;i<student.values.length;i++)
+      for(int i=student.values.length-1;i>=0;i--)
       {
          if(UMV == student.values.elementAt(i))
          {
           print("working");
-          student[UMK]=UMV;
           student.remove(student.keys.elementAt(i));
+          
          } 
          else
          {
           print("Value not found");
          }
       }
+      student[UMK]=UMV;
       print(student);
       
      
