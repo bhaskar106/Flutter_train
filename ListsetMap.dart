@@ -3,7 +3,7 @@ void main() {
   
   var  list1 = new List();
        list1.add(34);       
-       list1.add(2);
+       list1.add(876);
        list1.add(2);
        list1.add(2);
        list1.add(34);
@@ -26,13 +26,14 @@ void main() {
        print("Enter the Element to be removed:");
   var  RV = int.parse(stdin.readLineSync());
        for(int i=list1.length-1;i>=0;i--)
-      {
-       if(RV == list1[i])
        {
-       list1.remove(RV);
+        if(RV == list1[i])
+        {
+         list1.remove(RV);
+        }
        }
-      }
        print(RV);
+       list1.sort();
        print(list1);
        
 
@@ -54,8 +55,8 @@ void main() {
       students.addAll(['std2','std3','std4']);
       print(students);
       print("Enter the element that has to be added:");
-  var RSA = stdin.readLineSync();
-      students.add(RSA);
+  var SA = stdin.readLineSync();
+      students.add(SA);
       print(students);
       print("Enter the element that has to be removed:");
   var RSV = stdin.readLineSync();
@@ -89,6 +90,29 @@ void main() {
       student[Ukey]=Uvalue;
       print(student);
       print(student['std2']);
+      print("Enter the value and the key where the key should be updated:");
+  var UMV = stdin.readLineSync();
+  var UMK = stdin.readLineSync();
+      for(int i=0;i<student.values.length;i++)
+      {
+        //for(int j=0;j<student.keys.length;j++)
+       // {
+         if(UMV == student.values.elementAt(i))
+         {
+          print("working");
+          student[UMK]=UMV;
+          student.remove(student.keys.elementAt(i));
+          //student.keys.elementAt(i);
+          //student.values.elementAt(i)==UMK;
+         } 
+         else
+         {
+          print("Value not found");
+         }
+       // }
+      }
+      print(student);
+      
      
   var employee = {'empl1':'sanjay','empl2':'bhaskar','empl3':''};
       print("Map of type literal");
