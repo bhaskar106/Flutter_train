@@ -16,7 +16,7 @@ void main() {
        print(list1);
        print("Enter the index and value where you want to update:");
   var  UI = int.parse(stdin.readLineSync());
-  var  UV = stdin.readLineSync();
+  var  UV = int.parse(stdin.readLineSync());
        list1[UI]= UV;
        print(list1);
        print("Enter the index number of the value to be removed from the list:");
@@ -66,7 +66,6 @@ void main() {
   var RSI = int.parse(stdin.readLineSync());
       students.remove(students.elementAt(RSI));
       print(students);
-      //students.add(students.elementAt(value));
       
   
   var student = new Map();
@@ -95,21 +94,16 @@ void main() {
   var UMK = stdin.readLineSync();
       for(int i=0;i<student.values.length;i++)
       {
-        //for(int j=0;j<student.keys.length;j++)
-       // {
          if(UMV == student.values.elementAt(i))
          {
           print("working");
           student[UMK]=UMV;
           student.remove(student.keys.elementAt(i));
-          //student.keys.elementAt(i);
-          //student.values.elementAt(i)==UMK;
          } 
          else
          {
           print("Value not found");
          }
-       // }
       }
       print(student);
       
