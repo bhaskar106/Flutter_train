@@ -38,10 +38,12 @@ void main() {
       print(employee);
       print(employee['empl1']);
   
-  var bool1={};
-  var bool2={'bool1':'true','bool2':'false'};
+  Map bool1={};
+  Map bool2={'bool1':'true','bool2':'false'};
       print("bool values of the Map");
-      print(bool1.isEmpty);
-      print(bool2.isEmpty);
+  bool b1 = bool1.isEmpty;
+  bool b2 = bool2.isEmpty;
+       print(b1);
+       print(b2);
   
 }
