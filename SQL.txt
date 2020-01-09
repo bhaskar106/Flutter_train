@@ -1,0 +1,69 @@
+DATABASE MANAGEMENT:
+
+1.SELECT * FROM Customers;
+2.SELECT * FROM Customers
+WHERE ContactName="Yoshi Latimer";
+3.SELECT CustomerID FROM Customers
+WHERE ContactName="Patricio Simpson";
+4.SELECT * FROM Customers
+WHERE City IN ("Berlin","London");
+5.SELECT * FROM Customers
+WHERE CustomerID > 4 AND CustomerID < 8;
+6.SELECT *FROM Customers
+WHERE Country = "Mexico"
+ORDER BY CustomerName DESC; //ASC(for assending)
+7.SELECT * FROM Customers
+WHERE Country = "Mexico" AND PostalCode = "05021";
+8.DELETE FROM Customers
+WHERE Country = "UK";
+9.DELETE FROM Customers;
+10.DROP TABLE Customers;
+11.UPDATE Customers
+SET ContactName="Tom Holland"
+WHERE ContactName="Patricio Simpson";
+
+*****Write a query to create a table to hold the contact details of a person with appropriate primary key.*****
+
+   * Query: CREATE TABLE Contacts(ID int,ContactName varchar(50),PhoneNumber int(15),PRIMARY KEY(ID));
+
+   * Table Name: Contacts
+
+   * Columns:
+          ID: Int or Double- primary key
+          ContactName: Varchar or Text
+          PhoneNumber: Int  or Double 
+   * Insert: INSERT INTO Contacts(ID,ContactName,PhoneNumber) VALUES (1,"sanjay",9876543210);
+
+
+*****Design a database with all the required tables(with appropriate Primary and Foreign keys in each table) that represent Cab Booking System.*****
+
+Database:
+
+   * Query: CREATE DATABASE BookingSystem;
+
+Create Table1:
+ 
+   * Query: CREATE TABLE Drivers(ID int,DriverName varchar(50),PhoneNumber int(15),CarNumber varchar(15));
+
+   * Table Name: Drivers
+
+   * Columns:
+          ID: Int or Double
+          DriverName: Varchar or Text
+          PhoneNumber: Int  or Double
+          CarNumber: Varchar or Text
+
+   * Insert: INSERT INTO Drivers(ID,DriverName,PhoneNumber,CarNumber) VALUES (1,"Karthik",12345,"AP09 BR 1060");
+
+Create Table2:
+
+   * Query: CREATE TABLE Users(ID int,UserName varchar(50),PhoneNumber int(15));
+
+   * Table Name: Users
+
+   * Columns:
+          ID: Int or Double
+          UserName: Varchar or Text
+          PhoneNumber: Int  or Double
+   * Insert: INSERT INTO Users(ID,UserName,PhoneNumber) VALUES (1,"Rahul","HYD",67890);
+
