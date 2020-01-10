@@ -43,27 +43,41 @@ Database:
 
 Create Table1:
  
-   * Query: CREATE TABLE Drivers(ID int,DriverName varchar(50),PhoneNumber int(15),CarNumber varchar(15));
+   * Query: CREATE TABLE Drivers(DriverID int,DriverName varchar(50),PhoneNumber int(15),CarNumber varchar(15),PRIMARY KEY (DriverID));
 
    * Table Name: Drivers
 
    * Columns:
-          ID: Int or Double
+          DriverID: Int or Double -PRIMARY KEY
           DriverName: Varchar or Text
           PhoneNumber: Int  or Double
           CarNumber: Varchar or Text
 
-   * Insert: INSERT INTO Drivers(ID,DriverName,PhoneNumber,CarNumber) VALUES (1,"Karthik",12345,"AP09 BR 1060");
+   * Insert: INSERT INTO Drivers(DriverID,DriverName,PhoneNumber,CarNumber) VALUES (1,"Karthik",12345,"AP09 BR 1060");
 
 Create Table2:
 
-   * Query: CREATE TABLE Users(ID int,UserName varchar(50),PhoneNumber int(15));
+   * Query: CREATE TABLE Users(UserID int,UserName varchar(50),PhoneNumber int(15),PRIMARY KEY (UserID));
 
    * Table Name: Users
 
    * Columns:
-          ID: Int or Double
+          UserID: Int or Double -PRIMARY KEY
           UserName: Varchar or Text
           PhoneNumber: Int  or Double
-   * Insert: INSERT INTO Users(ID,UserName,PhoneNumber) VALUES (1,"Rahul","HYD",67890);
+
+   * Insert: INSERT INTO Users(UserID,UserName,PhoneNumber) VALUES (1,"Rahul","HYD",67890);
+
+Create Table3: 
+   * Query: CREATE TABLE Rides(UserID int,CarNumber varchar(15),DLocation varchar(50),DriverID int,FOREIGN KEY (UserID,DriverID));
+
+   * Table Name: Rides
+
+   * Columns:
+          UserID: Int or Double -FOREIGN KEY
+          CarNumber: Varchar or Text
+          DLocation: Varchar or Text
+          DriverID: Int or Double -FOREIGN KEY
+   
+   *Insert: INSERT INTO Users(UserID,CarNumber,DLocation,DriverID) VALUES (1,"AP09 BR 1060","HYD-1",1);
 
